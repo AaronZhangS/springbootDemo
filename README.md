@@ -1,7 +1,7 @@
 # springbootDemo
 springboot的入门和深入
 
-## 初步搭建springboot
+## 1.初步搭建springboot
   ### spring boot起步依赖（必要）
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -20,11 +20,11 @@ springboot的入门和深入
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-devtools</artifactId>
 	</dependency>
-	
+
   ### 创建Application入口和测试Controller
   > 一定要特别注意两个类的目录等级
   
-## 使用minIO对象存储库
+## 2.使用minIO对象存储库
   ### MinIO对象存储库依赖
    	<dependency>
 		<groupId>io.minio</groupId>
@@ -35,7 +35,7 @@ springboot的入门和深入
   ### 完成文件放入对象存储库putObject
   > MinioObjectClient.getInstance().saveFile(objectName, file.getPath());
 
-## 读取Yaml文件
+## 3.读取Yaml文件
   ### 读/写yaml文件依赖
   	<dependency>
             <groupId>org.jyaml</groupId>
