@@ -22,4 +22,7 @@ springboot的入门和深入
 		<artifactId>spring-boot-devtools</artifactId>
 	</dependency>
   ### 创建Application入口和测试Controller
-  *一定要特别注意两个类的目录等级
+  >一定要特别注意两个类的目录等级
+  
+## 使用minIO对象存储库
+  >完成文件放入对象存储库putObject
