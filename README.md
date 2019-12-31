@@ -25,14 +25,21 @@ springboot的入门和深入
   >一定要特别注意两个类的目录等级
   
 ## 使用minIO对象存储库
+<!-- MinIO对象存储库依赖 -->
+  ### MinIO对象存储库依赖
+   	<dependency>
+		<groupId>io.minio</groupId>
+		<artifactId>minio</artifactId>
+		<version>6.0.11</version>
+	</dependency>
   >完成文件放入对象存储库putObject
 ## 读取Yaml文件
   <!-- 读/写yaml文件依赖 -->
   ### 读/写yaml文件依赖
-  <dependency>
-	<groupId>org.jyaml</groupId>
-        <artifactId>jyaml</artifactId>
-        <version>1.3</version>
-  </dependency>
+  	<dependency>
+            <groupId>org.jyaml</groupId>
+            <artifactId>jyaml</artifactId>
+            <version>1.3</version>
+        </dependency>
   ### 完成读取并放入Map中
   >Map map =Yaml.loadType(file, HashMap.class);
