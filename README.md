@@ -38,10 +38,33 @@ springboot的入门和深入
 ## 3.读取Yaml文件
   ### 读/写yaml文件依赖
   	<dependency>
-            <groupId>org.jyaml</groupId>
-            <artifactId>jyaml</artifactId>
-            <version>1.3</version>
+        <groupId>org.jyaml</groupId>
+        <artifactId>jyaml</artifactId>
+        <version>1.3</version>
     </dependency>
 
   ### 完成读取并放入Map中
   > Map map =Yaml.loadType(file, HashMap.class);
+
+## 4.集成MyBatis和MySql
+  ### 添加 MyBatis依赖
+    <dependency>
+        <groupId>org.mybatis.spring.boot</groupId>
+        <artifactId>mybatis-spring-boot-starter</artifactId>
+        <version>1.2.0</version>
+    </dependency>
+
+  ### 添加 MySQL依赖
+    <dependency>
+        <groupId>mysql</groupId>
+        <artifactId>mysql-connector-java</artifactId>
+        <version>5.1.41</version>
+    </dependency>
+  
+  > 创建一个model
+
+  > 创建一个接口(用注解：@Mapper、@Select的方式)
+
+  > 创建apllication.properites文件
+  
+  > 书写mysql驱动配置
