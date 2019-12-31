@@ -26,3 +26,13 @@ springboot的入门和深入
   
 ## 使用minIO对象存储库
   >完成文件放入对象存储库putObject
+## 读取Yaml文件
+  <!-- 读/写yaml文件依赖 -->
+  ### 读/写yaml文件依赖
+  <dependency>
+	<groupId>org.jyaml</groupId>
+        <artifactId>jyaml</artifactId>
+        <version>1.3</version>
+  </dependency>
+  ### 完成读取并放入Map中
+  >Map map =Yaml.loadType(file, HashMap.class);
