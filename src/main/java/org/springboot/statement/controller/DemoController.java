@@ -19,7 +19,7 @@ public class DemoController {
 	@RequestMapping("/minio")
 	@ResponseBody
 	public String minio(){
-		File file = new File("/object_store_config.properties");
+		// File file = new File("/object_store_config.properties");
 		MinioObjectClient.getInstance().saveFile(null, null);
 		return "hello spring boot";
 	}
