@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>登录</title>
+    <title>注册</title>
     <script src="js/jquery-3.4.1.min.js"></script>
 </head>
 <body>
@@ -18,14 +18,14 @@
             <td><input type="password" name="password" id="password"></td>
         </tr>
         <tr>
-            <td><input type="button" id="login" value="登录"></td>
+            <td><input type="button" id="regist" value="注册"></td>
         </tr>
     </table>
 </body>
 <script type="text/javascript">
-$("#login").click(function(){
+$("#regist").click(function(){
 	$.ajax({
-		url:"http://localhost:8080/login/verify",
+		url:"http://localhost:8080/regist/verify",
 		dataType:"json",
 		data:{
 			username:$("#username").val(),
@@ -34,10 +34,8 @@ $("#login").click(function(){
 		success:function(result){
 			console.log("result",result)
 			if(result == 1){
-				alert("登录成功！前往首页")
-				window.location.href="Index.html"
-			}else{
-				alert("账户密码可能错误！！")
+				alert("注册成功！前往登录")
+				window.location.href="Login.html"
 			}
     	}
 	});
