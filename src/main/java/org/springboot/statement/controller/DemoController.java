@@ -57,6 +57,10 @@ public class DemoController {
 		int statu = 0;
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
+		String email = request.getParameter("email");
+		
+		
+		
 		Map map = userServiceImpl.loginUser(username, password);
 		if(map != null && map.get("username")!=null) {
 			System.out.println(map);

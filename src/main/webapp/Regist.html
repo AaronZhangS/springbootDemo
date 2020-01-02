@@ -18,6 +18,10 @@
             <td><input type="password" name="password" id="password"></td>
         </tr>
         <tr>
+            <td>邮箱：</td>
+            <td><input type="text" name="email" id="email"></td>
+        </tr>
+        <tr>
             <td><input type="button" id="regist" value="注册"></td>
         </tr>
     </table>
@@ -29,7 +33,8 @@ $("#regist").click(function(){
 		dataType:"json",
 		data:{
 			username:$("#username").val(),
-			password:$("#password").val()
+			password:$("#password").val(),
+			email:$("#email").val()
 		},
 		success:function(result){
 			console.log("result",result)
