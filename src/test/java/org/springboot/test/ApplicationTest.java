@@ -9,17 +9,20 @@ import java.util.UUID;
 import org.ho.yaml.Yaml;
 import org.springboot.statement.objectstore.MinioObjectClient;
 import org.springboot.statement.util.FileUtils;
+import org.springboot.statement.util.MailUtil;
 
 public class ApplicationTest {
 	public static void main(String[] args) {
-		File file = new File(System.getProperty("user.dir")+"/src/main/resources/"+"application_config.yaml");
+		MailUtil mailUtil = new MailUtil("", "123456789");
+		mailUtil.run();
+		/*File file = new File(System.getProperty("user.dir")+"/src/main/resources/"+"application_config.yaml");
 		try {
 			Map map =Yaml.loadType(file, HashMap.class);
 			System.out.println(map.get("file_directory"));
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		}*/
 		
 		/*File file = new File(System.getProperty("user.dir")+"/src/main/resources/"+"object_store_config.properties");
 		System.out.println(file.getPath());
