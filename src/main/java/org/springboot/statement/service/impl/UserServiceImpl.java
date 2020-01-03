@@ -14,13 +14,18 @@ public class UserServiceImpl implements UserService{
 	private UserMapper userMapper;
 	
 	@Override
-	public int addUser(String username, String password) {
-		return userMapper.addUser(username, password);
+	public int addUser(String username, String password, String email, String code) {
+		return userMapper.addUser(username, password, email, code);
 	}
 
 	@Override
 	public Map loginUser(String username, String password) {
 		return userMapper.loginUser(username, password);
+	}
+
+	@Override
+	public int updateUser(String code) {
+		return userMapper.updateUser(code);
 	}
 
 }
