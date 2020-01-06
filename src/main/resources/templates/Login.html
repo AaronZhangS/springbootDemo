@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>注册</title>
+    <title>登录</title>
     <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/ip.js"></script>
 </head>
 <body>
     <table>
@@ -18,29 +19,28 @@
             <td><input type="password" name="password" id="password"></td>
         </tr>
         <tr>
-            <td>邮箱：</td>
-            <td><input type="text" name="email" id="email"></td>
-        </tr>
-        <tr>
-            <td><input type="button" id="regist" value="注册"></td>
+            <td><input type="button" id="login" value="登录"></td>
         </tr>
     </table>
 </body>
 <script type="text/javascript">
-$("#regist").click(function(){
+$("#login").click(function(){
 	$.ajax({
-		url:"http://localhost:8080/regist/verify",
+		url:"http://"+ip+":8080/login/verify",
 		dataType:"json",
 		data:{
 			username:$("#username").val(),
-			password:$("#password").val(),
-			email:$("#email").val()
+			password:$("#password").val()
 		},
 		success:function(result){
 			console.log("result",result)
 			if(result == 1){
-				alert("注册成功！前往登录")
-				window.location.href="Login.html"
+				alert("登录成功！前往首页")
+				window.location.href="Index.html"
+			}else if(result == 2){
+				alert("登录失败！请先验证邮箱！")
+			}else{
+				alert("账户密码可能错误！！")
 			}
     	}
 	});
