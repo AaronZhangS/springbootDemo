@@ -28,4 +28,10 @@ public interface UserMapper {
 	 */
 	@Update("update user set state = 1 where code = #{code}")
 	int updateUser(@Param("code") String code);
+	
+	/**
+	 * 查询所有用户
+	 */
+	@Select("select * from user")
+	Map allUser();
 }

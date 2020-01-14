@@ -7,7 +7,7 @@ import org.apache.ibatis.annotations.Update;
 
 public interface UserService {
 	/**
-     * 新增用户
+        * 新增用户
      */
 	int addUser(String username,String password, String email, String code);
 	/**
@@ -18,4 +18,12 @@ public interface UserService {
 	 * 更新用户
 	 */
 	int updateUser(String code);
+	/**
+	 * 所有用户
+	 */
+	Map allUser();
+	/**
+	 * testng
+	 */
+	String returnStr();
 }

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TestNG Suite -->
+<suite name="TestNG Suite">
+	<test name="Java_Test_Learn">
+		<classes>
+			<!-- 添加不同测试类文件 -->
+			<class name="org.springboot.test.TestNg"></class>
+		</classes>
+	</test>
+</suite> 

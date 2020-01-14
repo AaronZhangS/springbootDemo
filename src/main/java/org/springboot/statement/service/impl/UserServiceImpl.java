@@ -28,4 +28,14 @@ public class UserServiceImpl implements UserService{
 		return userMapper.updateUser(code);
 	}
 
+	@Override
+	public Map allUser() {
+		return userMapper.allUser();
+	}
+
+	@Override
+	public String returnStr() {
+		return "TestNG";
+	}
+
 }
